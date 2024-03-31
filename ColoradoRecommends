@@ -1,0 +1,96 @@
+# Fun activities to choose from in Colorado.
+sundial = "Build a sundial"
+boba = "Boba with a friend"
+strange = "Make a Strange Loop video with Aloha"
+gold = "Pan for gold in Clear Creek"
+nature = "Nature journal on top of flat rock on way to Dinosaur Ridge"
+thrift = "Thrifting at Gone for Good in Broomfield"
+bake = "Bake a bittersweet chocolate mousse or butter mochi"
+comics = "Check out the Mile High Comics Megastore"
+nuclear = "Climb the Manitou Incline then go to the Cheyenne Mt. Nuclear Site"
+art = "Explore and buy art supplies at H.R. Meineger in Denver"
+ice = "Make reservation to see the Natural Ice Core Lab"
+bonita = "Invite 5 friends and go to Casa Bonita's"
+roar = "Visit the Lions at the Wild Animal Sanctuary"
+music = "Check out a CU Music Department recital"
+squat = "Do a 1000 squat workout, it's better than you think!"
+ping = "Bike to N. Boulder Park with a friend and play pingpong on tables"
+run = "Run community ditch!"
+tummy = "Rosies' ten minute core workout"
+
+# Collect user attributes to inform our recommendation.
+curiousity = int(input("Current curiosity? 1-5 (5 is very curious)? "))
+mood = input("Mood? (move, travel, putter, create, condition, comfort) ")
+
+
+# COMFORT.
+rec = ""
+if mood== "comfort":
+    rec = boba
+    else:
+        if curiousity >= 3:
+            rec = bake
+        else:
+        # Most broadly relevant and approachable subject.
+            rec = music
+print("Churchill Colorado Recommends: " + rec)
+
+# MOVE.
+rec = ""
+if mood== "move":
+    rec = ping
+    else:
+        if curiousity >= 3 :
+            rec = nuclear
+        else:
+        # Most broadly relevant and approachable subject.
+            rec = gold
+print("Churchill Colorado Recommends: " + rec)
+
+# PUTTER.
+rec = ""
+if mood== "putter":
+    rec = thrift
+else:
+    if curiousity >= 3 :
+        rec = comic
+    else:
+        # Most broadly relevant and approachable subject.
+        rec = art
+print("Churchill Colorado Recommends: " + rec)
+
+# TRAVEL.
+rec = ""
+if mood== "travel":
+    rec = bonita
+else:
+    if curiousity >= 3 :
+        rec = ice
+    else:
+        # Most broadly relevant and approachable subject.
+        rec = roar
+print("Churchill Colorado Recommends: " + rec)
+
+# CONDITION.
+rec = ""
+if mood== "condition":
+    rec = tummy
+else:
+    if curiousity >= 3 :
+        rec = squat
+    else:
+        # Most broadly relevant and approachable subject.
+        rec = run
+print("Churchill Colorado Recommends: " + rec)
+
+# CREATE.
+rec = ""
+if mood== "create":
+    rec = art
+else:
+    if curiousity >= 3 :
+        rec = strange
+    else:
+        # Most broadly relevant and approachable subject.
+        rec = sundial
+print("Churchill Colorado Recommends: " + rec)
