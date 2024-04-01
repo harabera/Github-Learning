@@ -27,70 +27,64 @@ mood = input("Mood? (move, travel, putter, create, condition, comfort) ")
 rec = ""
 if mood== "comfort":
     rec = boba
-    else:
-        if curiousity >= 3:
+    if curiousity >= 3:
             rec = bake
-        else:
+    else:
         # Most broadly relevant and approachable subject.
             rec = music
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom Recommends: " + rec)
 
 # MOVE.
 rec = ""
 if mood== "move":
     rec = ping
-    else:
-        if curiousity >= 3 :
+    if curiousity >= 3 :
             rec = nuclear
-        else:
+    else:
         # Most broadly relevant and approachable subject.
             rec = gold
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom recommends: " + rec)
 
 # PUTTER.
 rec = ""
 if mood== "putter":
     rec = thrift
-else:
-    if curiousity >= 3 :
+    if curiousity >= 3:
         rec = comic
     else:
         # Most broadly relevant and approachable subject.
         rec = art
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom recommends: " + rec)
 
 # TRAVEL.
 rec = ""
 if mood== "travel":
     rec = bonita
-else:
-    if curiousity >= 3 :
+    if curiousity >= 3:
         rec = ice
     else:
         # Most broadly relevant and approachable subject.
         rec = roar
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom recommends: " + rec)
 
 # CONDITION.
 rec = ""
 if mood== "condition":
     rec = tummy
-else:
-    if curiousity >= 3 :
+    if curiousity >= 3:
         rec = squat
     else:
         # Most broadly relevant and approachable subject.
         rec = run
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom recommends: " + rec)
 
 # CREATE.
 rec = ""
 if mood== "create":
     rec = art
-else:
-    if curiousity >= 3 :
+    if curiousity >= 3:
         rec = strange
     else:
         # Most broadly relevant and approachable subject.
         rec = sundial
-print("Churchill Colorado Recommends: " + rec)
+    print("Mom recommends: " + rec)
