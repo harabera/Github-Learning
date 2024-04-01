@@ -1,0 +1,41 @@
+# The purpose of this program is to calculate how many cashiers and cooks are needed to minimize customer wait time.
+import random
+
+num_cashiers = 1
+num_cooks = 2
+customers_served = 0
+
+waiting_to_order = 0
+waiting_for_food = 0
+total_order_wait=0
+total_food_wait=0
+time=0
+
+# Calculate total "Waiting to Order" and "Waiting for Food" after 5 hours.
+for total_order_wait in range(1, 301):
+   
+# Customers arrive every minute and line up to order.
+    waiting_to_order = waiting_to_order + random.randint(0, 6)
+
+# Each cashier can take up to three orders per minute.
+    new_orders = min(num_cashiers * 3, waiting_to_order)
+
+# Each restuarant has 2 cooks and it takes them 1 minute per order.
+    new_food = min(num_cooks *1, waiting_for_food)
+    
+# After ordering, customers wait for their food to be made.
+    waiting_to_order = waiting_to_order - new_orders
+    waiting_for_food = waiting_for_food + new_orders - new_food
+# Total number of customers served.
+    customers_served = customers_served + new_food
+    
+    total_order_wait=total_order_wait + waiting_to_order
+    total_food_wait=total_food_wait + waiting_for_food 
+    time = time+1
+    print(str(time)+ " MINUTE")
+    print(str(waiting_to_order) + " customers waiting to order.")
+    print(str(waiting_for_food) + " customers waiting for food.")
+
+print(str(total_order_wait) + " customers waited to order.")
+print(str(total_food_wait) + " customers waited for food.")
+print(str(customers_served) + " customers were served during this shift.")
